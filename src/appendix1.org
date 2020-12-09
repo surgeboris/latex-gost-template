@@ -1,0 +1,5 @@
+#+begin_export latex
+\chapter{Первое Приложение}
+#+end_export
+
+First appendix text

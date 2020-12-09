@@ -1,5 +1,6 @@
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-*.log
-*.blg
+*.tex~
+*.bbl
+src/auto
+src/*.aux
+src/main.tex
+src/main.pdf

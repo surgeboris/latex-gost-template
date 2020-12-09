@@ -1,0 +1,44 @@
+#+LATEX_CLASS_OPTIONS: [utf8x, 12pt]
+#+LATEX_HEADER: \include{preamble}
+#+OPTIONS: author:nil date:nil title:nil toc:nil
+
+#+begin_export latex
+\frontmatter % Выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+\include{title-page}
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\clearpage
+#+end_export
+
+#+begin_export latex
+\Introduction
+#+end_export
+#+INCLUDE: "./intro.org"
+
+#+begin_export latex
+\mainmatter % Включает ранее выключенную нумерацию страниц, здесь начинается нумерованная часть документа
+#+end_export
+
+#+INCLUDE: "./chapter1.org"
+#+INCLUDE: "./chapter2.org"
+
+#+begin_export latex
+\backmatter % Здесь заканчивается нумерованная часть документа и начинаются ссылки и заключение
+#+end_export
+
+#+begin_export latex
+\Conclusion % заключение к отчёту
+#+end_export
+#+INCLUDE: "./conclusion.org"
+
+#+begin_export latex
+\include{biblio}
+#+end_export
+
+#+begin_export latex
+\appendix   % Тут идут приложения
+#+end_export
+
+#+INCLUDE: "./appendix1.org"
