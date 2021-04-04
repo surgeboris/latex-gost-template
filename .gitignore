@@ -1,5 +1,6 @@
 *.tex~
 *.bbl
+*.lol
 src/auto
 src/*.aux
 src/main.tex

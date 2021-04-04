@@ -12,11 +12,12 @@
     (setq org-latex-pdf-process
       (let ((latex-command "%latex -interaction nonstopmode -output-directory %o %f")
              (bibtex-command "bibtex %b"))
-      `(,latex-command ,bibtex-command ,latex-command ,latex-command)))))
+        `(,latex-command ,bibtex-command ,latex-command ,latex-command)))))
 
 (defun org-latex-setup/build ()
   (let ((delim "\n------------------------------\n\n")
-        (success "SUCCESS!\n"))
+         (success "SUCCESS!\n")
+         (org-latex-listings t))
     (condition-case err
       (progn
         (org-latex-export-to-pdf)

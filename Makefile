@@ -12,5 +12,5 @@ build:
     --eval="(load-file (fix-path-if-win \"${ORG_LATEX_SETUP}\"))" \
     --batch -f org-latex-setup/build --kill
 clean:
-	find ${SRC_DIR}/ -type f -regex ".*\.\(aux\|log\|tex~\)" -exec rm -f {} \; \
+	find ${SRC_DIR}/ -type f -regex ".*\.\(aux\|lol\|log\|tex~\)" -exec rm -f {} \; \
     && find ${SRC_DIR}/ -type f -regex ".*\/main\.\(bbl\|tex\)" -exec rm -f {} \;

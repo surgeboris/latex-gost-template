@@ -9,6 +9,7 @@
 \thispagestyle{empty}
 \setcounter{page}{0}
 \tableofcontents
+\lstlistoflistings
 \clearpage
 #+end_export
 
