@@ -39,7 +39,7 @@
    В Листинге\nbsp{}\ref{lst2} мы встраиваем исходный код из отдельного файла.
 
    #+begin_export latex
-   \lstinputlisting[caption={Исходный код из файла \lstinline{./biblio.tex}},label=lst2]{./biblio.tex}
+   \lstinputlisting[caption={Исходный код из файла \lstinline{./tex/biblio.tex}},label=lst2]{./tex/biblio.tex}
    #+end_export
 ** Point two
    Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec facilisis

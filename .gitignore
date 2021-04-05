@@ -1,7 +1,2 @@
-*.tex~
-*.bbl
-*.lol
-src/auto
-src/*.aux
-src/main.tex
-src/main.pdf
+.pdf-view-restore
+output/**

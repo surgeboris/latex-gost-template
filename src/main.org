@@ -1,10 +1,12 @@
+#+EXPORT_FILE_NAME: ../output/main.pdf
+#+LATEX_CLASS: org-latex-setup
 #+LATEX_CLASS_OPTIONS: [utf8x, 12pt]
-#+LATEX_HEADER: \include{preamble}
+#+LATEX_HEADER: \include{tex/preamble}
 #+OPTIONS: author:nil date:nil title:nil toc:nil
 
 #+begin_export latex
 \frontmatter % Выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
-\include{title-page}
+\include{tex/title-page}
 
 \thispagestyle{empty}
 \setcounter{page}{0}
@@ -35,7 +37,7 @@
 #+INCLUDE: "./conclusion.org"
 
 #+begin_export latex
-\include{biblio}
+\include{tex/biblio}
 #+end_export
 
 #+begin_export latex

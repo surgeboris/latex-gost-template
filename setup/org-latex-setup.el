@@ -8,11 +8,7 @@
          ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
          ("\\paragraph{%s}" . "\\paragraph*{%s}")
          ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-    (setq org-latex-default-class class-name)
-    (setq org-latex-pdf-process
-      (let ((latex-command "%latex -interaction nonstopmode -output-directory %o %f")
-             (bibtex-command "bibtex %b"))
-        `(,latex-command ,bibtex-command ,latex-command ,latex-command)))))
+    (setq org-latex-pdf-process '("latexmk -pdf -f -outdir=%o %f"))))
 
 (defun org-latex-setup/build ()
   (let ((delim "\n------------------------------\n\n")
