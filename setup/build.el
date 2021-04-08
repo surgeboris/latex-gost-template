@@ -1,5 +1,5 @@
 (with-eval-after-load 'ox-latex
-  (let ((class-name "org-latex-setup"))
+  (let ((class-name "latex-gost-template"))
     (add-to-list 'org-latex-classes
       `(,class-name "\\documentclass[utf8x, 12pt]{G7-32}\n[NO-DEFAULT-PACKAGES]\n[NO-PACKAGES]"
          ("\\chapter{%s}" . "\\chapter*{%s}")
@@ -10,13 +10,16 @@
          ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
     (setq org-latex-pdf-process '("latexmk -pdf -f -outdir=%o %f"))))
 
-(defun org-latex-setup/build ()
+(defun latex-gost-template/build (should-export-tex)
   (let ((delim "\n------------------------------\n\n")
          (success "SUCCESS!\n")
-         (org-latex-listings t))
+         (org-latex-listings t)
+         (org-latex-logfiles-extensions nil))
     (condition-case err
       (progn
-        (org-latex-export-to-pdf)
+        (if should-export-tex
+          (org-latex-export-to-latex)
+          (org-latex-export-to-pdf))
         (let* ((buf (get-buffer-create "*Org PDF LaTeX Output*"))
                 (log (or (with-current-buffer buf (buffer-string)) ""))
                 (msg (concat delim log delim success delim)))
@@ -25,3 +28,9 @@
                      (log (or (with-current-buffer buf (buffer-string)) ""))
                      (msg (concat delim log delim (or (car (cdr err)) ""))))
                (error msg))))))
+
+(defun latex-gost-template/build-pdf ()
+  (latex-gost-template/build nil))
+
+(defun latex-gost-template/build-tex ()
+  (latex-gost-template/build t))
