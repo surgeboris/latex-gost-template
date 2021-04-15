@@ -22,23 +22,20 @@
 
 \vspace{\stretch{2}}
 
-\begin{flushright}
-  \pbox{0.5\textwidth}{
-    Выполнил:\\
-    студент гр. какой-то-номер\\ % chktex 8
-    Фамилия1 И1.О1.\\
-    Проверил:\\
-    уч.ст., должность\\
-    Фамилия2 И2.О2.\\
-  }
-\end{flushright}
-
-\begin{flushleft}
-  \parbox{2.5cm}{
-    № \hrulefill\\
-    \phantom{} \hrulefill\\
-  }
-\end{flushleft}
+\noindent
+\pbox[b]{\textwidth}{
+  № \hrulefill\\
+  \makebox[2.5cm][l]{\hrulefill}\\
+}
+\hfill
+\pbox[b]{\textwidth}{
+  Выполнил:\\
+  студент гр. какой-то-номер\\ % chktex 8
+  Фамилия1 И1.О1.\\
+  Проверил:\\
+  уч.ст., должность\\
+  Фамилия2 И2.О2.\\
+}
 
 \vspace{\stretch{1}}
 
