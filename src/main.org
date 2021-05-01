@@ -1,6 +1,6 @@
 #+EXPORT_FILE_NAME: ../output/main.pdf
 #+LATEX_CLASS: latex-gost-template
-#+LATEX_CLASS_OPTIONS: [utf8x, 12pt]
+#+LATEX_CLASS_OPTIONS: [utf8, 12pt]
 #+LATEX_HEADER: \include{tex/preamble}
 #+OPTIONS: author:nil date:nil title:nil toc:nil
 
