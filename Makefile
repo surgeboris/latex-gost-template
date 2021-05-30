@@ -31,4 +31,4 @@ watch: build-tex
 # in order for org-mode changes to be reflected call `load-file` with ./setup/export-tex-hook.el
 	. ${ENV_LATEX_SETUP}; \
     cd ./src; \
-    latexmk -pdf -f -pvc -outdir=../output -view=none ../output/main.tex
+    latexmk -e \$$bibtex_fudge=1 -pdf -f -pvc -outdir=../output -view=none ../output/main.tex

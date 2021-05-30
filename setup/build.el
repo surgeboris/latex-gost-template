@@ -8,7 +8,7 @@
          ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
          ("\\paragraph{%s}" . "\\paragraph*{%s}")
          ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-    (setq org-latex-pdf-process '("latexmk -pdf -f -outdir=%o %f"))))
+    (setq org-latex-pdf-process '("latexmk -e \\$bibtex_fudge=1 -pdf -f -outdir=%o %f"))))
 
 (defun latex-gost-template/build (should-export-tex)
   (let ((delim "\n------------------------------\n\n")
